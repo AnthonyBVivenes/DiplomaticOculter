@@ -8,9 +8,11 @@
 
 #include <msclr\marshal_cppstd.h>
 
+
+
 namespace Project2 {
 
-
+	
 
 
 	using namespace System;
@@ -93,38 +95,50 @@ namespace Project2 {
 
 	private: System::Windows::Forms::ListBox^ listBox1;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ txtMsj;
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::GroupBox^ groupBox3;
 	private: System::Windows::Forms::GroupBox^ groupBox2;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
+
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
+	private: System::Windows::Forms::RadioButton^ rbOcultarRGB;
+
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::RadioButton^ radioButton4;
-	private: System::Windows::Forms::RadioButton^ radioButton3;
+	private: System::Windows::Forms::RadioButton^ rbExtraerRGB;
+
+
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label5;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::Label^ label6;
-	private: System::Windows::Forms::TextBox^ textBox3;
+
+
+
+
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::GroupBox^ groupBox4;
 	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::RadioButton^ radioButton6;
+
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Label^ label7;
 	private: System::Windows::Forms::RadioButton^ radioButton7;
 	private: System::Windows::Forms::RadioButton^ radioButton5;
 	private: System::Windows::Forms::GroupBox^ groupBox5;
-	private: System::Windows::Forms::TextBox^ textBox5;
-	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ txtKPublica;
+	private: System::Windows::Forms::TextBox^ txtKPrivada;
+
+
 	private: System::Windows::Forms::Label^ label9;
 	private: System::Windows::Forms::Button^ button5;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Label^ label10;
 	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::TextBox^ txtPassExtraer;
+
+
+	private: System::Windows::Forms::Button^ button7;
+	private: System::Windows::Forms::CheckBox^ cbSave;
+
+
 
 
 
@@ -149,36 +163,32 @@ namespace Project2 {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->cbSave = (gcnew System::Windows::Forms::CheckBox());
+			this->txtPassExtraer = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->radioButton4 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton3 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbExtraerRGB = (gcnew System::Windows::Forms::RadioButton());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
+			this->rbOcultarRGB = (gcnew System::Windows::Forms::RadioButton());
 			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->txtMsj = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
 			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
 			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->radioButton6 = (gcnew System::Windows::Forms::RadioButton());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->label10 = (gcnew System::Windows::Forms::Label());
+			this->txtKPublica = (gcnew System::Windows::Forms::TextBox());
+			this->txtKPrivada = (gcnew System::Windows::Forms::TextBox());
+			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->groupBox3->SuspendLayout();
@@ -228,11 +238,10 @@ namespace Project2 {
 			// 
 			this->groupBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->groupBox3->Controls->Add(this->label6);
-			this->groupBox3->Controls->Add(this->textBox3);
+			this->groupBox3->Controls->Add(this->cbSave);
+			this->groupBox3->Controls->Add(this->txtPassExtraer);
 			this->groupBox3->Controls->Add(this->button2);
-			this->groupBox3->Controls->Add(this->radioButton4);
-			this->groupBox3->Controls->Add(this->radioButton3);
+			this->groupBox3->Controls->Add(this->rbExtraerRGB);
 			this->groupBox3->Controls->Add(this->label4);
 			this->groupBox3->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -245,67 +254,58 @@ namespace Project2 {
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Extraer";
 			// 
-			// label6
+			// cbSave
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->label6->Location = System::Drawing::Point(60, 87);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(45, 16);
-			this->label6->TabIndex = 12;
-			this->label6->Text = L"CrLn";
+			this->cbSave->AutoSize = true;
+			this->cbSave->Checked = true;
+			this->cbSave->CheckState = System::Windows::Forms::CheckState::Checked;
+			this->cbSave->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->cbSave->Location = System::Drawing::Point(6, 80);
+			this->cbSave->Name = L"cbSave";
+			this->cbSave->Size = System::Drawing::Size(167, 20);
+			this->cbSave->TabIndex = 15;
+			this->cbSave->Text = L"Guardar en escritorio";
+			this->cbSave->UseVisualStyleBackColor = true;
 			// 
-			// textBox3
+			// txtPassExtraer
 			// 
-			this->textBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+			this->txtPassExtraer->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->textBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox3->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtPassExtraer->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txtPassExtraer->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
+			this->txtPassExtraer->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->textBox3->Location = System::Drawing::Point(140, 83);
-			this->textBox3->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(42, 23);
-			this->textBox3->TabIndex = 11;
-			this->textBox3->Text = L"-1";
+			this->txtPassExtraer->Location = System::Drawing::Point(6, 112);
+			this->txtPassExtraer->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
+			this->txtPassExtraer->Name = L"txtPassExtraer";
+			this->txtPassExtraer->Size = System::Drawing::Size(78, 26);
+			this->txtPassExtraer->TabIndex = 14;
+			this->txtPassExtraer->Text = L"clave";
 			// 
 			// button2
 			// 
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12));
 			this->button2->Location = System::Drawing::Point(87, 112);
+			this->button2->Margin = System::Windows::Forms::Padding(0, 3, 3, 3);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(95, 26);
 			this->button2->TabIndex = 10;
 			this->button2->Text = L"Extraer de";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
-			// radioButton4
+			// rbExtraerRGB
 			// 
-			this->radioButton4->AutoSize = true;
-			this->radioButton4->Location = System::Drawing::Point(6, 64);
-			this->radioButton4->Name = L"radioButton4";
-			this->radioButton4->Size = System::Drawing::Size(134, 20);
-			this->radioButton4->TabIndex = 9;
-			this->radioButton4->TabStop = true;
-			this->radioButton4->Text = L"Sustracción BIN";
-			this->radioButton4->UseVisualStyleBackColor = true;
-			// 
-			// radioButton3
-			// 
-			this->radioButton3->AutoSize = true;
-			this->radioButton3->Location = System::Drawing::Point(6, 38);
-			this->radioButton3->Name = L"radioButton3";
-			this->radioButton3->Size = System::Drawing::Size(136, 20);
-			this->radioButton3->TabIndex = 8;
-			this->radioButton3->TabStop = true;
-			this->radioButton3->Text = L"Sustitución RGB";
-			this->radioButton3->UseVisualStyleBackColor = true;
+			this->rbExtraerRGB->AutoSize = true;
+			this->rbExtraerRGB->Location = System::Drawing::Point(6, 38);
+			this->rbExtraerRGB->Name = L"rbExtraerRGB";
+			this->rbExtraerRGB->Size = System::Drawing::Size(136, 20);
+			this->rbExtraerRGB->TabIndex = 8;
+			this->rbExtraerRGB->TabStop = true;
+			this->rbExtraerRGB->Text = L"Sustitución RGB";
+			this->rbExtraerRGB->UseVisualStyleBackColor = true;
 			// 
 			// label4
 			// 
@@ -324,11 +324,8 @@ namespace Project2 {
 			// 
 			this->groupBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->groupBox2->Controls->Add(this->label5);
-			this->groupBox2->Controls->Add(this->textBox2);
-			this->groupBox2->Controls->Add(this->radioButton2);
 			this->groupBox2->Controls->Add(this->label3);
-			this->groupBox2->Controls->Add(this->radioButton1);
+			this->groupBox2->Controls->Add(this->rbOcultarRGB);
 			this->groupBox2->Controls->Add(this->button1);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -340,46 +337,6 @@ namespace Project2 {
 			this->groupBox2->TabIndex = 5;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Ocultar";
-			// 
-			// label5
-			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->label5->Location = System::Drawing::Point(60, 87);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(45, 16);
-			this->label5->TabIndex = 7;
-			this->label5->Text = L"CrLn";
-			// 
-			// textBox2
-			// 
-			this->textBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
-				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->textBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox2->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->textBox2->Location = System::Drawing::Point(140, 85);
-			this->textBox2->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(42, 23);
-			this->textBox2->TabIndex = 6;
-			this->textBox2->Text = L"-1";
-			// 
-			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(6, 63);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(136, 20);
-			this->radioButton2->TabIndex = 7;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Incrustación BIN";
-			this->radioButton2->UseVisualStyleBackColor = true;
 			// 
 			// label3
 			// 
@@ -394,16 +351,16 @@ namespace Project2 {
 			this->label3->TabIndex = 6;
 			this->label3->Text = L"Método";
 			// 
-			// radioButton1
+			// rbOcultarRGB
 			// 
-			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(6, 37);
-			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(136, 20);
-			this->radioButton1->TabIndex = 1;
-			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Sustitución RGB";
-			this->radioButton1->UseVisualStyleBackColor = true;
+			this->rbOcultarRGB->AutoSize = true;
+			this->rbOcultarRGB->Location = System::Drawing::Point(6, 37);
+			this->rbOcultarRGB->Name = L"rbOcultarRGB";
+			this->rbOcultarRGB->Size = System::Drawing::Size(136, 20);
+			this->rbOcultarRGB->TabIndex = 1;
+			this->rbOcultarRGB->TabStop = true;
+			this->rbOcultarRGB->Text = L"Sustitución RGB";
+			this->rbOcultarRGB->UseVisualStyleBackColor = true;
 			// 
 			// button1
 			// 
@@ -417,23 +374,23 @@ namespace Project2 {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
-			// textBox1
+			// txtMsj
 			// 
-			this->textBox1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+			this->txtMsj->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox1->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtMsj->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txtMsj->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
+			this->txtMsj->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->textBox1->Location = System::Drawing::Point(465, 72);
-			this->textBox1->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(202, 178);
-			this->textBox1->TabIndex = 3;
-			this->textBox1->Text = L"hola";
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
+			this->txtMsj->Location = System::Drawing::Point(465, 72);
+			this->txtMsj->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
+			this->txtMsj->Multiline = true;
+			this->txtMsj->Name = L"txtMsj";
+			this->txtMsj->Size = System::Drawing::Size(202, 178);
+			this->txtMsj->TabIndex = 3;
+			this->txtMsj->Text = L"hola";
+			this->txtMsj->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox1_TextChanged);
 			// 
 			// label1
 			// 
@@ -469,7 +426,6 @@ namespace Project2 {
 			this->groupBox4->Controls->Add(this->radioButton7);
 			this->groupBox4->Controls->Add(this->radioButton5);
 			this->groupBox4->Controls->Add(this->label8);
-			this->groupBox4->Controls->Add(this->radioButton6);
 			this->groupBox4->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
@@ -484,7 +440,7 @@ namespace Project2 {
 			// radioButton7
 			// 
 			this->radioButton7->AutoSize = true;
-			this->radioButton7->Location = System::Drawing::Point(9, 89);
+			this->radioButton7->Location = System::Drawing::Point(9, 38);
 			this->radioButton7->Name = L"radioButton7";
 			this->radioButton7->Size = System::Drawing::Size(89, 20);
 			this->radioButton7->TabIndex = 8;
@@ -513,18 +469,6 @@ namespace Project2 {
 			this->label8->Size = System::Drawing::Size(57, 16);
 			this->label8->TabIndex = 6;
 			this->label8->Text = L"Método";
-			// 
-			// radioButton6
-			// 
-			this->radioButton6->AutoSize = true;
-			this->radioButton6->Checked = true;
-			this->radioButton6->Location = System::Drawing::Point(9, 37);
-			this->radioButton6->Name = L"radioButton6";
-			this->radioButton6->Size = System::Drawing::Size(77, 20);
-			this->radioButton6->TabIndex = 1;
-			this->radioButton6->TabStop = true;
-			this->radioButton6->Text = L"Ninguna";
-			this->radioButton6->UseVisualStyleBackColor = true;
 			// 
 			// button3
 			// 
@@ -556,11 +500,12 @@ namespace Project2 {
 			// 
 			this->groupBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
+			this->groupBox5->Controls->Add(this->button7);
 			this->groupBox5->Controls->Add(this->button5);
 			this->groupBox5->Controls->Add(this->button4);
 			this->groupBox5->Controls->Add(this->label10);
-			this->groupBox5->Controls->Add(this->textBox5);
-			this->groupBox5->Controls->Add(this->textBox4);
+			this->groupBox5->Controls->Add(this->txtKPublica);
+			this->groupBox5->Controls->Add(this->txtKPrivada);
 			this->groupBox5->Controls->Add(this->label9);
 			this->groupBox5->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -573,52 +518,42 @@ namespace Project2 {
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Llaves";
 			// 
-			// label9
+			// button7
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button7->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12));
+			this->button7->Location = System::Drawing::Point(9, 108);
+			this->button7->Margin = System::Windows::Forms::Padding(0, 3, 3, 3);
+			this->button7->Name = L"button7";
+			this->button7->Size = System::Drawing::Size(95, 26);
+			this->button7->TabIndex = 16;
+			this->button7->Text = L"Generar";
+			this->button7->UseVisualStyleBackColor = true;
+			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
+			// 
+			// button5
+			// 
+			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button5->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->label9->Location = System::Drawing::Point(6, 41);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(55, 16);
-			this->label9->TabIndex = 6;
-			this->label9->Text = L"Pública";
+			this->button5->Location = System::Drawing::Point(147, 68);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(49, 23);
+			this->button5->TabIndex = 15;
+			this->button5->Text = L"Copiar";
+			this->button5->UseVisualStyleBackColor = true;
 			// 
-			// textBox4
+			// button4
 			// 
-			this->textBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
-				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->textBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox4->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button4->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->textBox4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->textBox4->Location = System::Drawing::Point(67, 68);
-			this->textBox4->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->ReadOnly = true;
-			this->textBox4->Size = System::Drawing::Size(81, 23);
-			this->textBox4->TabIndex = 12;
-			this->textBox4->Text = L"-1";
-			// 
-			// textBox5
-			// 
-			this->textBox5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
-				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->textBox5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox5->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->textBox5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
-				static_cast<System::Int32>(static_cast<System::Byte>(214)));
-			this->textBox5->Location = System::Drawing::Point(67, 37);
-			this->textBox5->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->ReadOnly = true;
-			this->textBox5->Size = System::Drawing::Size(81, 23);
-			this->textBox5->TabIndex = 13;
-			this->textBox5->Text = L"-1";
+			this->button4->Location = System::Drawing::Point(147, 37);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(49, 23);
+			this->button4->TabIndex = 10;
+			this->button4->Text = L"Copiar";
+			this->button4->UseVisualStyleBackColor = true;
 			// 
 			// label10
 			// 
@@ -633,29 +568,51 @@ namespace Project2 {
 			this->label10->TabIndex = 14;
 			this->label10->Text = L"Privada";
 			// 
-			// button4
+			// txtKPublica
 			// 
-			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button4->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtKPublica->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+				static_cast<System::Int32>(static_cast<System::Byte>(55)));
+			this->txtKPublica->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txtKPublica->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(147, 37);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(49, 23);
-			this->button4->TabIndex = 10;
-			this->button4->Text = L"Copiar";
-			this->button4->UseVisualStyleBackColor = true;
+			this->txtKPublica->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->txtKPublica->Location = System::Drawing::Point(67, 37);
+			this->txtKPublica->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
+			this->txtKPublica->Name = L"txtKPublica";
+			this->txtKPublica->ReadOnly = true;
+			this->txtKPublica->Size = System::Drawing::Size(81, 23);
+			this->txtKPublica->TabIndex = 13;
+			this->txtKPublica->Text = L"-1";
 			// 
-			// button5
+			// txtKPrivada
 			// 
-			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button5->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 8.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtKPrivada->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
+				static_cast<System::Int32>(static_cast<System::Byte>(55)));
+			this->txtKPrivada->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->txtKPrivada->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(147, 68);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(49, 23);
-			this->button5->TabIndex = 15;
-			this->button5->Text = L"Copiar";
-			this->button5->UseVisualStyleBackColor = true;
+			this->txtKPrivada->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->txtKPrivada->Location = System::Drawing::Point(67, 68);
+			this->txtKPrivada->Margin = System::Windows::Forms::Padding(15, 3, 3, 3);
+			this->txtKPrivada->Name = L"txtKPrivada";
+			this->txtKPrivada->Size = System::Drawing::Size(81, 23);
+			this->txtKPrivada->TabIndex = 12;
+			this->txtKPrivada->Text = L"-1";
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"MS UI Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
+				static_cast<System::Int32>(static_cast<System::Byte>(214)));
+			this->label9->Location = System::Drawing::Point(6, 41);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(55, 16);
+			this->label9->TabIndex = 6;
+			this->label9->Text = L"Pública";
 			// 
 			// button6
 			// 
@@ -687,7 +644,7 @@ namespace Project2 {
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->txtMsj);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->listBox1);
 			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(222)), static_cast<System::Int32>(static_cast<System::Byte>(223)),
@@ -780,19 +737,92 @@ namespace Project2 {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 			
 		
-		if (listBox1->SelectedIndex > -1) {
+
+		if (listBox1->SelectedIndex == -1)
+		{
+			MessageBox::Show("Por favor seleccione un archivo");
+			return;
+
+		}
+		/*
+		if (rbOcultarRGB->Checked)  // ← Forma correcta de verificar
+		{
+
+			// Lógica para ocultar en RGB
+			String^ archivoOrigen = listBox1->SelectedItem->ToString();
+			String^ archivoDestino = "imagen_con_datos.png";
+			String^ msj = "C:\\Users\\Vivenes\\Documents\\vs proyects\\ej1\\Project2\\x64\\Debug\\nota.txt";
 
 
-			// Uso:
 			std::string inputImage = msclr::interop::marshal_as<std::string>(listBox1->SelectedItem->ToString());
 			std::string textFile = "nota.txt";
 			std::string outputImage = "noti.bmp";
 
-			hideFileInImage(inputImage, textFile, outputImage);
+
+			int index = listBox1->SelectedIndex;
+			if (index > -1)
+			{
+				FileItem^ selectedItem = safe_cast<FileItem^>(listBox1->Items[index]);
+				MessageBox::Show(
+					"Nombre: " + selectedItem->FileName + "\n" +
+					"Ruta completa: " + selectedItem->FullPath,
+					"Información del archivo",
+					MessageBoxButtons::OK,
+					MessageBoxIcon::Information
+				);
+				P::LsbWrapper::HideFileInImage(selectedItem->FullPath, msj, archivoDestino);
+			}
 
 			//hideFileInImage(inputImage, textFile, outputImage);
+			
+
 		}
+		*/
+
+		if (rbOcultarRGB->Checked) {
+			try {
+
+				// Obtener rutas de los controles del formulario
+				String^ imagePath = listBox1->SelectedItem->ToString();
+				String^ fileToHide = "C:\\Users\\Vivenes\\Documents\\vs proyects\\ej1\\Project2\\x64\\Debug\\nota.txt";
+				String^ outputPath = "rsa.bmp";
+				String^ pubKeyPath = txtKPublica->Text;
+				MessageBox::Show(pubKeyPath);
+
+
+				int index = listBox1->SelectedIndex;
+				if (index > -1)
+				{
+					FileItem^ selectedItem = safe_cast<FileItem^>(listBox1->Items[index]);
+					MessageBox::Show(
+						"Nombre: " + selectedItem->FileName + "\n" +
+						"Ruta completa: " + selectedItem->FullPath,
+						"Información del archivo",
+						MessageBoxButtons::OK,
+						MessageBoxIcon::Information
+					);
+					P::LsbWrapper::HideFileHybrid(selectedItem->FullPath, fileToHide, outputPath, pubKeyPath);
+					MessageBox::Show("Archivo ocultado con cifrado híbrido exitosamente!");
+				}
+
+
+				
+			}
+			catch (Exception^ e) {
+				MessageBox::Show("Error: " + e->Message);
+			}
+
+		}
+		
+
+
+
+
+
+
+
 	}
+
 	private: System::Void listBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -805,6 +835,72 @@ private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^
 }
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 	Close();
+}
+private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	P::LsbWrapper::GenerateAndShowKeys();
+	P::LsbWrapper::GetCurrentPrivateKey();
+	P::LsbWrapper::GetCurrentPublicKey();
+
+	txtKPrivada->Text = P::LsbWrapper::current_priv_key;
+	txtKPublica->Text = P::LsbWrapper::current_pub_key;
+
+
+}
+
+
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+	if (listBox1->SelectedIndex == -1)
+	{
+		MessageBox::Show("Por favor seleccione un archivo");
+		return;
+
+	}
+
+	if (rbExtraerRGB->Checked) {
+		 
+
+			static int n = 0;
+			n++;
+
+			int index = listBox1->SelectedIndex;
+			if (index > -1)
+			{
+				FileItem^ selectedItem = safe_cast<FileItem^>(listBox1->Items[index]);
+				MessageBox::Show(
+					"Nombre: " + selectedItem->FileName + "\n" +
+					"Ruta completa: " + selectedItem->FullPath,
+					"Información del archivo",
+					MessageBoxButtons::OK,
+					MessageBoxIcon::Information
+				);
+
+
+				// Construir ruta completa
+				P::LsbWrapper::ExtractFileHybrid(
+					selectedItem->FullPath,
+					"C:\\Users\\Vivenes\\Documents\\vs proyects\\ej1\\Project2\\nota.txt",
+					txtKPrivada->Text
+				);
+
+
+				MessageBox::Show("Archivo extraido con cifrado híbrido exitosamente!");
+			}
+
+		
+
+	}
+
+
+
+
+
+
+
+
+
 }
 };
 

@@ -1,5 +1,16 @@
-﻿  MyForm.cpp
-  Source.cpp
-  Generando código...
-  lsb.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+﻿  test.cpp
+  cripto.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+test.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000019) para 'evp_pkey_st'; no se puede ejecutar la imagen
+Source.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002F) para 'evp_pkey_st'; no se puede ejecutar la imagen
+MyForm.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002E) para 'evp_pkey_st'; no se puede ejecutar la imagen
+lsb.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000021) para 'evp_pkey_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000020) para 'evp_pkey_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000024) para 'evp_cipher_ctx_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000025) para 'evp_pkey_ctx_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000026) para 'evp_cipher_st'; no se puede ejecutar la imagen
+lsb.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000029) para 'bio_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002A) para 'bio_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002B) para 'bio_method_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000037) para 'engine_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000046) para 'ossl_init_settings_st'; no se puede ejecutar la imagen
   Project2.vcxproj -> C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\x64\Debug\Project2.exe
