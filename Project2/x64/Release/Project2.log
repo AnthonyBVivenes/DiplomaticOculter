@@ -1,7 +1,19 @@
 ﻿  cripto.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.cpp(8,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
+C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
+  (compilando archivo de origen "cripto.cpp")
+  
   lsb.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.cpp(8,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
-  (compilando archivo de origen "lsb.cpp")
+C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\lsb.cpp(6,10): error C1083: No se puede abrir el archivo incluir: 'openssl/rand.h': No such file or directory
+  MyForm.cpp
+C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
+  (compilando archivo de origen "MyForm.cpp")
+  
+  Source.cpp
+C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
+  (compilando archivo de origen "Source.cpp")
+  
+  test.cpp
+C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
+  (compilando archivo de origen "test.cpp")
   
   Generando código...

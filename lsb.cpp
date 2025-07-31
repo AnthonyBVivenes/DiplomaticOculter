@@ -311,8 +311,18 @@ void extractFileHybrid(const string& imagePath,
         EVP_PKEY* privkey = PEM_read_bio_PrivateKey(bio_priv, NULL, NULL, NULL);
         BIO_free(bio_priv);
         if (!privkey) throw runtime_error("Clave privada RSA inválida");
+        
+        // >>> AQUÍ VA LA VERIFICACIÓN ADICIONAL <<<
+        if (!EVP_PKEY_get0_RSA(privkey)) {
+            MessageBox::Show("La clave no es una clave RSA válida");
+            EVP_PKEY_free(privkey);
+            return; // O puedes lanzar una excepción
+        }
 
         // 4. Descifrar clave AES con RSA
+
+
+
         vector<unsigned char> decryptedKey = rsa_decrypt(privkey, encryptedKey.data(), encryptedKey.size());
         EVP_PKEY_free(privkey);
 
@@ -320,6 +330,8 @@ void extractFileHybrid(const string& imagePath,
             throw runtime_error("Tamaño de clave AES incorrecto después de descifrar");
         }
 
+
+        //MessageBox::Show("init 5");
         // 5. Descifrar datos con AES
         vector<unsigned char> decryptedData = aes_decrypt(decryptedKey.data(), iv,
             encryptedData.data(), encryptedData.size());
@@ -334,10 +346,13 @@ void extractFileHybrid(const string& imagePath,
         if (!outputFile) throw runtime_error("Error al crear archivo de salida");
         outputFile.write(reinterpret_cast<const char*>(decryptedData.data()), original_size);
 
-        cout << "Extracción completada correctamente en " << outputFilePath << endl;
+        //cout << "Extracción completada correctamente en " << outputFilePath << endl;
     }
     catch (const exception& e) {
-        cerr << "ERROR en extractFileHybrid: " << e.what() << endl;
+        MessageBox::Show(gcnew String(("ERROR en extractFileHybrid: " + string(e.what())).c_str()),
+            "Error de Extracción",
+            MessageBoxButtons::OK,
+            MessageBoxIcon::Error);
         throw;
     }
 }

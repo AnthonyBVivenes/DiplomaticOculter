@@ -5,7 +5,7 @@ using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThread]
-int APIENTRY WinMainw(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
+int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow) {
     Application::EnableVisualStyles();
     Application::SetCompatibleTextRenderingDefault(false);
     Project2::MyForm form;
