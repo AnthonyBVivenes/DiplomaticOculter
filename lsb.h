@@ -2,6 +2,9 @@
 #include <string>
 #include <string.h>
 
+
+
+
 // Declaraciones para compatibilidad C
 #ifdef __cplusplus
 extern "C" {
@@ -27,6 +30,7 @@ extern "C" {
     void extractFileHybrid(const std::string& imagePath,
         const std::string& outputFilePath,
         const std::string& rsaPrivKeyPath);
+
 
 #ifdef __cplusplus
 } // extern "C"

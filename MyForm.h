@@ -133,7 +133,7 @@ namespace Project2 {
 
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Label^ label7;
-	private: System::Windows::Forms::RadioButton^ radioButton7;
+
 	private: System::Windows::Forms::RadioButton^ radioButton5;
 	private: System::Windows::Forms::GroupBox^ groupBox5;
 	private: System::Windows::Forms::TextBox^ txtKPublica;
@@ -154,8 +154,12 @@ namespace Project2 {
 	private: System::Windows::Forms::Button^ button7;
 
 	private: System::Windows::Forms::ListBox^ lbFileSecreto;
-	private: System::Windows::Forms::RadioButton^ radioButton2;
-	private: System::Windows::Forms::RadioButton^ radioButton1;
+private: System::Windows::Forms::RadioButton^ rbExtraerIncrustacion;
+
+private: System::Windows::Forms::RadioButton^ rbOcultarIncrustacion;
+private: System::Windows::Forms::RadioButton^ radioButton7;
+private: System::Windows::Forms::RadioButton^ radioButton1;
+
 
 
 
@@ -182,18 +186,19 @@ namespace Project2 {
 			this->listBox1 = (gcnew System::Windows::Forms::ListBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
+			this->rbExtraerIncrustacion = (gcnew System::Windows::Forms::RadioButton());
 			this->txtPassExtraer = (gcnew System::Windows::Forms::TextBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->rbExtraerRGB = (gcnew System::Windows::Forms::RadioButton());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->rbOcultarIncrustacion = (gcnew System::Windows::Forms::RadioButton());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->rbOcultarRGB = (gcnew System::Windows::Forms::RadioButton());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
-			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton5 = (gcnew System::Windows::Forms::RadioButton());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -208,8 +213,8 @@ namespace Project2 {
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->lbFileSecreto = (gcnew System::Windows::Forms::ListBox());
+			this->radioButton7 = (gcnew System::Windows::Forms::RadioButton());
 			this->radioButton1 = (gcnew System::Windows::Forms::RadioButton());
-			this->radioButton2 = (gcnew System::Windows::Forms::RadioButton());
 			this->groupBox1->SuspendLayout();
 			this->groupBox3->SuspendLayout();
 			this->groupBox2->SuspendLayout();
@@ -258,7 +263,7 @@ namespace Project2 {
 			// 
 			this->groupBox3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->groupBox3->Controls->Add(this->radioButton2);
+			this->groupBox3->Controls->Add(this->rbExtraerIncrustacion);
 			this->groupBox3->Controls->Add(this->txtPassExtraer);
 			this->groupBox3->Controls->Add(this->button2);
 			this->groupBox3->Controls->Add(this->rbExtraerRGB);
@@ -273,6 +278,18 @@ namespace Project2 {
 			this->groupBox3->TabIndex = 6;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Extraer";
+			// 
+			// rbExtraerIncrustacion
+			// 
+			this->rbExtraerIncrustacion->AutoSize = true;
+			this->rbExtraerIncrustacion->Enabled = false;
+			this->rbExtraerIncrustacion->Location = System::Drawing::Point(6, 64);
+			this->rbExtraerIncrustacion->Name = L"rbExtraerIncrustacion";
+			this->rbExtraerIncrustacion->Size = System::Drawing::Size(107, 20);
+			this->rbExtraerIncrustacion->TabIndex = 16;
+			this->rbExtraerIncrustacion->TabStop = true;
+			this->rbExtraerIncrustacion->Text = L"Incrustación";
+			this->rbExtraerIncrustacion->UseVisualStyleBackColor = true;
 			// 
 			// txtPassExtraer
 			// 
@@ -331,7 +348,7 @@ namespace Project2 {
 			// 
 			this->groupBox2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->groupBox2->Controls->Add(this->radioButton1);
+			this->groupBox2->Controls->Add(this->rbOcultarIncrustacion);
 			this->groupBox2->Controls->Add(this->label3);
 			this->groupBox2->Controls->Add(this->rbOcultarRGB);
 			this->groupBox2->Controls->Add(this->button1);
@@ -345,6 +362,19 @@ namespace Project2 {
 			this->groupBox2->TabIndex = 5;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Ocultar";
+			// 
+			// rbOcultarIncrustacion
+			// 
+			this->rbOcultarIncrustacion->AutoSize = true;
+			this->rbOcultarIncrustacion->Enabled = false;
+			this->rbOcultarIncrustacion->Location = System::Drawing::Point(6, 63);
+			this->rbOcultarIncrustacion->Name = L"rbOcultarIncrustacion";
+			this->rbOcultarIncrustacion->Size = System::Drawing::Size(107, 20);
+			this->rbOcultarIncrustacion->TabIndex = 7;
+			this->rbOcultarIncrustacion->TabStop = true;
+			this->rbOcultarIncrustacion->Text = L"Incrustación";
+			this->rbOcultarIncrustacion->UseVisualStyleBackColor = true;
+			this->rbOcultarIncrustacion->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
 			// 
 			// label3
 			// 
@@ -391,9 +421,9 @@ namespace Project2 {
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->label1->Location = System::Drawing::Point(20, 53);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(165, 16);
+			this->label1->Size = System::Drawing::Size(139, 16);
 			this->label1->TabIndex = 4;
-			this->label1->Text = L"Arrastre la imagen aquí";
+			this->label1->Text = L"Archivo contenedor";
 			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// label2
@@ -413,6 +443,7 @@ namespace Project2 {
 			// 
 			this->groupBox4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(62)), static_cast<System::Int32>(static_cast<System::Byte>(70)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
+			this->groupBox4->Controls->Add(this->radioButton1);
 			this->groupBox4->Controls->Add(this->radioButton7);
 			this->groupBox4->Controls->Add(this->radioButton5);
 			this->groupBox4->Controls->Add(this->label8);
@@ -427,19 +458,10 @@ namespace Project2 {
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Encriptación";
 			// 
-			// radioButton7
-			// 
-			this->radioButton7->AutoSize = true;
-			this->radioButton7->Location = System::Drawing::Point(9, 38);
-			this->radioButton7->Name = L"radioButton7";
-			this->radioButton7->Size = System::Drawing::Size(89, 20);
-			this->radioButton7->TabIndex = 8;
-			this->radioButton7->Text = L"Simétrica";
-			this->radioButton7->UseVisualStyleBackColor = true;
-			// 
 			// radioButton5
 			// 
 			this->radioButton5->AutoSize = true;
+			this->radioButton5->Enabled = false;
 			this->radioButton5->Location = System::Drawing::Point(9, 63);
 			this->radioButton5->Name = L"radioButton5";
 			this->radioButton5->Size = System::Drawing::Size(96, 20);
@@ -482,9 +504,9 @@ namespace Project2 {
 				static_cast<System::Int32>(static_cast<System::Byte>(214)));
 			this->label7->Location = System::Drawing::Point(12, 9);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(310, 19);
+			this->label7->Size = System::Drawing::Size(331, 19);
 			this->label7->TabIndex = 8;
-			this->label7->Text = L"Diplomatic Oculter | estenografía";
+			this->label7->Text = L"DiplomaticOculter | Esteganografía ";
 			// 
 			// groupBox5
 			// 
@@ -638,27 +660,28 @@ namespace Project2 {
 			this->lbFileSecreto->TabIndex = 11;
 			this->lbFileSecreto->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::lbFileSecreto_SelectedIndexChanged);
 			// 
+			// radioButton7
+			// 
+			this->radioButton7->AutoSize = true;
+			this->radioButton7->Enabled = false;
+			this->radioButton7->Location = System::Drawing::Point(9, 38);
+			this->radioButton7->Name = L"radioButton7";
+			this->radioButton7->Size = System::Drawing::Size(89, 20);
+			this->radioButton7->TabIndex = 8;
+			this->radioButton7->Text = L"Simétrica";
+			this->radioButton7->UseVisualStyleBackColor = true;
+			// 
 			// radioButton1
 			// 
 			this->radioButton1->AutoSize = true;
-			this->radioButton1->Location = System::Drawing::Point(6, 63);
+			this->radioButton1->Checked = true;
+			this->radioButton1->Location = System::Drawing::Point(9, 89);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(107, 20);
-			this->radioButton1->TabIndex = 7;
+			this->radioButton1->Size = System::Drawing::Size(73, 20);
+			this->radioButton1->TabIndex = 9;
 			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"Incrustación";
+			this->radioButton1->Text = L"Híbrida";
 			this->radioButton1->UseVisualStyleBackColor = true;
-			// 
-			// radioButton2
-			// 
-			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(6, 64);
-			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(107, 20);
-			this->radioButton2->TabIndex = 16;
-			this->radioButton2->TabStop = true;
-			this->radioButton2->Text = L"Incrustación";
-			this->radioButton2->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
@@ -849,7 +872,33 @@ namespace Project2 {
 			}
 		}
 
+		if (rbOcultarIncrustacion->Checked) {
 
+			try {
+				if (listBox1->SelectedIndex > -1 && (lbFileSecreto->SelectedIndex > -1)) {
+					FileItem^ selectedItemIMG = safe_cast<FileItem^>(listBox1->Items[listBox1->SelectedIndex]);
+					FileItem^ selectedItemSecreto = safe_cast<FileItem^>(lbFileSecreto->Items[lbFileSecreto->SelectedIndex]);
+
+					// Obtener la extensión del archivo de imagen seleccionado
+					String^ extension = System::IO::Path::GetExtension(selectedItemIMG->FullPath);
+
+
+					// Generar el nuevo nombre de archivo de salida
+					String^ outputFileName = String::Format("out{0}{1}", outputCounter++, extension);
+
+					// Llamar a HideFileHybrid con el nuevo nombre de archivo
+					//P::LsbWrapper::HideFileAppendHybrid(selectedItemIMG->FullPath, selectedItemSecreto->FullPath, outputFileName, txtKPublica->Text);
+					//MessageBox::Show("Archivo ocultado con cifrado híbrido exitosamente!");
+				}
+				else {
+					MessageBox::Show("Seleccione los archivos para procesar");
+				}
+			}
+			catch (Exception^ e) {
+				MessageBox::Show("Error: " + e->Message);
+			}
+
+		}
 
 
 
@@ -915,12 +964,12 @@ namespace Project2 {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 
+		static int n = 0;
+		n++;
 
 		if (rbExtraerRGB->Checked) {
 
 
-			static int n = 0;
-			n++;
 
 
 			if (listBox1->SelectedIndex > -1)
@@ -953,7 +1002,33 @@ namespace Project2 {
 
 
 
+		if (rbExtraerIncrustacion->Checked) {
 
+
+
+
+			if (listBox1->SelectedIndex > -1)
+			{
+				FileItem^ selectedItem = safe_cast<FileItem^>(listBox1->Items[listBox1->SelectedIndex]);
+				String^ outputFileName = String::Format("secreto{0}", n);
+
+
+				String^ extension = System::IO::Path::GetExtension(selectedItem->FullPath);
+
+
+				// Construir ruta completa
+				/*
+				P::LsbWrapper::ExtractFileAppendHybrid(
+					selectedItem->FullPath,
+					outputFileName,
+					txtKPrivada->Text
+				);
+				*/
+
+			}
+
+
+		}
 
 
 
@@ -1000,7 +1075,12 @@ namespace Project2 {
 
 
 	}
-	};
+	private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+	}
+};
 
 
 

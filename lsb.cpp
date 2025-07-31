@@ -12,6 +12,13 @@
 
 #include "cripto.h"
 
+
+
+
+
+
+
+
 using namespace std;
 using namespace System;
 using namespace System::Windows::Forms;
@@ -19,6 +26,8 @@ using namespace System::Windows::Forms;
 #include <iostream>
 
 
+#include <string>
+#include <algorithm>
 
 
 void hideFileInImage(const string imagePath,
@@ -235,6 +244,7 @@ void hideFileHybrid(const string& imagePath,
 
 
 
+
 void extractFileHybrid(const string& imagePath,
     const string& outputFilePath,
     const string& rsaPrivKeyStr) {
@@ -356,6 +366,18 @@ void extractFileHybrid(const string& imagePath,
         throw;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

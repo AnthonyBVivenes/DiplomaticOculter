@@ -1,19 +1,19 @@
-﻿  cripto.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
-  (compilando archivo de origen "cripto.cpp")
-  
-  lsb.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\lsb.cpp(6,10): error C1083: No se puede abrir el archivo incluir: 'openssl/rand.h': No such file or directory
-  MyForm.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
-  (compilando archivo de origen "MyForm.cpp")
-  
+﻿  MyForm.cpp
   Source.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
-  (compilando archivo de origen "Source.cpp")
-  
-  test.cpp
-C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\cripto.h(2,10): error C1083: No se puede abrir el archivo incluir: 'openssl/evp.h': No such file or directory
-  (compilando archivo de origen "test.cpp")
-  
   Generando código...
+  cripto.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
+test.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000019) para 'evp_pkey_st'; no se puede ejecutar la imagen
+Source.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000031) para 'evp_pkey_st'; no se puede ejecutar la imagen
+MyForm.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000030) para 'evp_pkey_st'; no se puede ejecutar la imagen
+lsb.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000021) para 'evp_pkey_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000020) para 'evp_pkey_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000025) para 'evp_cipher_ctx_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000026) para 'evp_pkey_ctx_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000027) para 'evp_cipher_st'; no se puede ejecutar la imagen
+lsb.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002A) para 'bio_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002B) para 'bio_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100002C) para 'bio_method_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000037) para 'engine_st'; no se puede ejecutar la imagen
+cripto.obj : warning LNK4248: símbolo (token) de typeref sin resolver (01000046) para 'ossl_init_settings_st'; no se puede ejecutar la imagen
+lsb.obj : warning LNK4248: símbolo (token) de typeref sin resolver (0100004E) para 'rsa_st'; no se puede ejecutar la imagen
+  Project2.vcxproj -> C:\Users\Vivenes\Documents\vs proyects\ej1\Project2\x64\Release\Project2.exe
